@@ -27,7 +27,7 @@ const EventsContextProvider = ({ children }) => {
 
     useEffect(() => {
         fetchEvents();
-    }, []);
+    }, []); 
 
     // If event is null, initialFormData will be an object with all properties set to their default values. If event is not null, initialFormData will be an object with properties set to the values of event properties, or their default values if the event properties are undefined.
 
