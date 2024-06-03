@@ -28,6 +28,7 @@ Skapa disabled-knapp: <button disabled="...">
         --p-color: rgb(44, 44, 44);
         --text-secondary: #ffffff;
         --primary-muted: #ababab;
+        --tertiary: #F7B800;
 
         --secondary: rgb(44, 44, 44);
         --navfoot-bg: rgb(56, 65, 95);;

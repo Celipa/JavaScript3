@@ -7,18 +7,15 @@ import { useEffect } from 'react';
 import { useAuth } from '@/app/(root)/_components/auth-provider';
 
 export default function SignInPage() {
-    const { user, isAdmin } = useAuth();
+    const { user } = useAuth();
     const router = useRouter();
 
     useEffect(() => {
-        
-        if (user && !isAdmin) {
+        if (user) {
             console.log('is user');
             router.push('/');
-        } else if (isAdmin){
-            console.log('is admin');
         }
-    }, [user, isAdmin, router]);
+    }, [user, router]);
 
     return (
         <div className='flex min-h-full my-10 flex-1 flex-col justify-center bg-primary rounded-3xl p-12 mx-4 md:mx-20 lg:mx-64'>

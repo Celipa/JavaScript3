@@ -42,15 +42,7 @@ const EventDetailsPage = () => {
                         className='z-10 p-2 md:p-4 absolute flex items-center gap-2 transition-all hover:-translate-x-2 bg-primary-muted rounded-full shadow-sm w-fit mt-2 md:mt-4 mx-6 md:mx-16 lg:mx-36'>
                         <FaArrowLeft className='size-3 md:size-4 text-black' />
                     </Link>
-                    <Image
-                        src={event.image}
-                        width={400}
-                        height={400}
-                        alt='event'
-                        className='w-screen h-96 object-cover'
-                    />
-
-                    <div className=''>
+                    <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <h1 className='px-3 py-1.5 font-bold tracking-tight bg-tertiary w-fit'>
                             {event.name}
                         </h1>
@@ -59,22 +51,30 @@ const EventDetailsPage = () => {
                             <span>{event.location}</span>
                         </h3>
                     </div>
+                    <Image
+                        src={event.image}
+                        width={400}
+                        height={400}
+                        alt='event'
+                        className='w-screen h-96 object-cover'
+                    />
+
                     <div className='px-6 md:px-16 lg:px-36 pb-2 md:py-8'>
                         <h3>{event.description}</h3>
 
                         {/* Event details container */}
-                        <dl className='sm:w-fit my-8 mx-auto sm:mx-0 bg-primary-muted divide-y divide-gray-800/10 rounded-md shadow-md text-gray-800'>
-                            <div className='py-4 flex justify-center items-center flex-col sm:grid sm:grid-cols-2 sm:gap-4 sm:px-0 grid-flow-col'>
-                                <dt className='mx-7 w-fit'>
-                                    <FaRegCalendarAlt className='size-4' />
+                        <dl className=''>
+                            <div className='py-4 flex justify-center items-center border-b-4 flex-col sm:grid sm:grid-cols-2 sm:gap-4 sm:px-0 grid-flow-col'>
+                                <dt className='mx-7 w-fit '>
+                                    <FaRegCalendarAlt className='size-8 ' />
                                 </dt>
                                 <dd className='mt-2 mx-7 sm:mx-0 sm:mr-7 text-sm leading-6 sm:mt-0'>
                                     {event.date}
                                 </dd>
                             </div>
-                            <div className='py-4 flex justify-center items-center flex-col sm:grid sm:grid-cols-2 sm:gap-4 sm:px-0 grid-flow-col'>
+                            <div className='py-4 flex border-b-4 justify-center items-center flex-col sm:grid sm:grid-cols-2 sm:gap-4 sm:px-0 grid-flow-col'>
                                 <dt className='mx-7 w-fit'>
-                                    <MdPersonAddAlt1 className='size-4' />
+                                    <MdPersonAddAlt1 className='size-8' />
                                 </dt>
                                 <dd className='mt-2 mx-7 sm:mx-0 sm:mr-7 text-sm leading-6 sm:mt-0'>
                                     <span className='font-semibold'>
@@ -85,7 +85,7 @@ const EventDetailsPage = () => {
                                 </dd>
                             </div>
                             <div className='py-4 flex justify-center items-center sm:items-start flex-col sm:grid sm:grid-cols-2 sm:gap-4 sm:px-0 grid-flow-col'>
-                                <dt className='mx-7 w-fit text-sm font-semibold'>
+                                <dt className='mx-7 w-fit text-lg font-semibold'>
                                     Participants
                                 </dt>
                                 <dd className='mt-2 mx-7 sm:mx-0 sm:mr-7 flex flex-col text-sm gap-y-2 leading-6 sm:mt-0'>
@@ -94,7 +94,7 @@ const EventDetailsPage = () => {
                                             <div
                                                 key={user.id}
                                                 className='items-center sm:items-start min-w-0 flex-auto flex flex-col'>
-                                                <span className='text-sm leading-6 text-gray-900'>
+                                                <span className='text-sm border-b-4  leading-6 text-gray-900'>
                                                     {user.email}
                                                 </span>
                                             </div>

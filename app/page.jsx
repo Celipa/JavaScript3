@@ -62,7 +62,7 @@ const LandingPage = () => {
                 }}
             >
                 <div className='flex flex-col bg-textbox w-2/6 py-5 pl-5 pr-4 ml-36 rounded-3xl' id='section1'>
-                    <h1 className='text-tertiary text-6xl'>Event Finder</h1>
+                    <h1 className='text-h1color text-6xl'>Event Finder</h1>
                     <span className='text-3xl text-h2color'> Find The Event For You </span>
                     <p className=' text-base tracking-wide leading-7' >
                     Eventfinder Is An Excellent Choice For Customers Who Are Looking For An Easy, Fast, And Reliable Way To Purchase Tickets For Events. With A Wide Range Of Events To Choose From And A User-Friendly Interface, Eventfinder Is The Perfect Online Event Shop For Customers Who Want To Find And Buy Tickets For Events Quickly And Easily..

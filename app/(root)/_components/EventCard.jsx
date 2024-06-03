@@ -31,8 +31,8 @@ export const EventCard = ({
                     ? 'opacity-80'
                     : 'hover:bg-primary-muted hover:scale-105'
             }`}>
-            <div className='justify-center text-left'>
-                <h3 className='mb-2 w-fit px-3 bg-tertiary font-semibold text-primary'>
+            <div className='justify-center bg-gray text-left'>
+                <h3 className='mb-2 w-fit px-3 shadow-black bg-tertiary shadow-md rounded-md font-semibold text-h1color'>
                     {name}
                 </h3>
                 <div className='w-full h-[150px]'>
