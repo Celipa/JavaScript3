@@ -1,6 +1,6 @@
 'use client';
 
-import { useAuth } from '@/app/(root)/admin/_components/auth-provider';
+import { useAuth } from '@/app/(root)/_components/auth-provider';
 import { addNewUser } from '@/app/lib/user.db';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'next/navigation';
@@ -214,7 +214,7 @@ const SignUpForm = () => {
                 <div>
                     <button
                         type='submit'
-                        className='flex w-full justify-center rounded-md bg-tertiary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary'>
+                        className='flex w-full justify-center rounded-md bg-navfoot px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary'>
                         Sign up
                     </button>
                 </div>

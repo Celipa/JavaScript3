@@ -1,6 +1,6 @@
 'use client';
 
-import { useAuth } from '@/app/(root)/admin/_components/auth-provider';
+import { useAuth } from '@/app/(root)/_components/auth-provider';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { MdErrorOutline } from 'react-icons/md';
 import { useForm } from 'react-hook-form';
@@ -91,7 +91,7 @@ const SignInForm = () => {
                 <div>
                     <button
                         type='submit'
-                        className='flex w-full justify-center rounded-md bg-tertiary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary'>
+                        className='flex w-full justify-center rounded-md bg-navfoot px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary'>
                         Sign in
                     </button>
                 </div>

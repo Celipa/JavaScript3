@@ -22,7 +22,7 @@ const Navbar = () => {
                     alt='logo'
                     width={60}
                     height={60}
-                    className='w-16 h-16 rounded-full'
+                    className='w-16 h-16 rounded-full cursor-pointer shadow-lg shadow-inner shadow-white'
                 />
             </Link>
             <div className="flex gap-8 text-textsecondary ml-28 px-48">

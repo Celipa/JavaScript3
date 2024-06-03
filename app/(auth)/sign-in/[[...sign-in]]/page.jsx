@@ -4,7 +4,7 @@ import Link from 'next/link';
 import SignInForm from '../../_components/sign-in-form';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
-import { useAuth } from '@/app/(root)/admin/_components/auth-provider';
+import { useAuth } from '@/app/(root)/_components/auth-provider';
 
 export default function SignInPage() {
     const { user, isAdmin } = useAuth();
@@ -31,7 +31,7 @@ export default function SignInPage() {
             <p className='mt-10 text-center text-sm text-gray-500'>
                 Don{"'"}t have an account?{' '}
                 <Link
-                    className='font-semibold leading-6 text-tertiary hover:opacity-75'
+                    className='font-semibold leading-6 text-navfoot hover:opacity-75'
                     href='/sign-in'>
                     {' '}
                     Register
