@@ -46,7 +46,7 @@ export const EventCard = ({
                 
             >
                 <h2>Hold on as we redirect you to the next page...</h2>
-                <BeatLoader color="#123abc" />
+                <BeatLoader color="#ffffff" />
 
             </Modal>
             <div className='justify-center bg-gray text-left'>

@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
-import { arrayUnion, updateDoc, doc, getDoc } from 'firebase/firestore';
 import { db } from '@/firebase.config';
+import { arrayUnion, updateDoc, doc, getDoc } from 'firebase/firestore';
 
-// Post to create a booking, if post is sent with a user already booked, it will remove the booking.
+
+// Create a booking for an event, or remove a booking if the user is already booked.
 
 export async function POST(request) {
     try {

@@ -1,8 +1,8 @@
-// GET BY ID API
 import { db } from "@/firebase.config"
-import { doc, getDoc } from "firebase/firestore"
 import { NextResponse } from "next/server"
+import { doc, getDoc } from "firebase/firestore"
 
+// Get event by id
 export async function GET(request, { params }) {
   const { id } = params
   try {

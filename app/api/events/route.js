@@ -1,7 +1,8 @@
-import { db } from "@/firebase.config";
 import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/firebase.config";
 
 
+// Get all events
 export async function GET(req, res) {
     try {
         const querySnapShot = await getDocs(collection(db, 'events'))

@@ -2,7 +2,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons';
-import { EventCard } from './(root)/_components/EventCard';
+import { EventCard } from './(root)/_components/Events';
 import { useState, useEffect } from 'react';
 import { useAuth } from './(root)/_components/auth-provider';
 import { getAllEvents } from './lib/event.db';

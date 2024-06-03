@@ -5,6 +5,10 @@ import Image from 'next/image';
 import { useAuth } from './auth-provider';
 import Link from 'next/link';
 import { IoCog } from 'react-icons/io5';
+import Modal from 'react-modal';
+import router from 'next/router';
+import React from 'react';
+import { BeatLoader } from 'react-spinners';
 
 const Navbar = () => {
     const { user } = useAuth();
@@ -13,6 +17,8 @@ const Navbar = () => {
         ?.split(' ')
         .map((name) => name[0])
         .join('');
+
+    const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
     return (
         <div className='flex justify-between items-center px-6 md:px-16 lg:px-36 py-4 bg-secondary-muted border-b border-tertiary shadow'>
@@ -36,13 +42,38 @@ const Navbar = () => {
                     <SignOutButton />
                 ) : (
                     <Link href='/sign-in'>
-                        <button>Sign in</button>
+                        <button onClick={() => {
+                        setModalIsOpen(true);
+                        setTimeout(() => {
+                        setModalIsOpen(false);
+                        router.push('/sign-in');
+                        }, 3000);
+                        }}>
+                        Sign in
+                        </button>
                     </Link>
+                    
                 )}
+                <Modal
+                className={`text-tertiary bg-navfoot p-6 rounded-md mt-96 shadow-lg text-center`}
+                isOpen={modalIsOpen}
+                onRequestClose={() => setModalIsOpen(false)}
+                contentLabel="Redirecting Modal"
+                
+            >
+                <h2>Hold on as we redirect you to the next page...</h2>
+                <BeatLoader color="#ffffff" />
 
+            </Modal>
                 {!user && (
                     <Link href='/sign-up'>
-                        <button>Sign Up</button>
+                        <button onClick={() => {
+                        setModalIsOpen(true);
+                        setTimeout(() => {
+                        setModalIsOpen(false);
+                        router.push('/sign-up');
+                        }, 3000);
+                        }}>Sign Up</button>
                     </Link>
                 )}
                 {user && (

@@ -2,15 +2,15 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaArrowLeft } from 'react-icons/fa';
+import { MdPersonAddAlt1 } from 'react-icons/md';
 import { useEvents } from '@/app/(root)/_components/events-provider';
 import { getEventById } from '@/app/lib/event.db';
 import { useParams } from 'next/navigation';
 import { useEffect } from 'react';
-import { useUsers } from '../_components/users-provider';
-import { FaArrowLeft } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { FaRegCalendarAlt } from 'react-icons/fa';
-import { MdPersonAddAlt1 } from 'react-icons/md';
+import { useUsers } from '../_components/users-provider';
 
 const EventDetailsPage = () => {
     const { id } = useParams();
