@@ -4,6 +4,7 @@ import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
 
+// Eventfinders Firebase configuration from the group project.
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_KEY,

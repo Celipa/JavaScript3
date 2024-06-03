@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className='flex justify-between items-center px-6 md:px-16 lg:px-36 py-4 bg-secondary-muted border-b border-tertiary shadow'>
             <Link href='/'>
                 <Image
-                    src='/assets/Logo.jpg'
+                    src='/assets/Eventfinder-logo.jpg'
                     alt='logo'
                     width={60}
                     height={60}
