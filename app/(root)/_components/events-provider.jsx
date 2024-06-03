@@ -17,7 +17,9 @@ const EventsContextProvider = ({ children }) => {
     const fetchEvents = async () => {
         try {
             const fetchedEvents = await getAllEvents();
-            setEvents(fetchedEvents);
+            const currentEvents = fetchedEvents.filter(event => new Date(event.date) >= new Date());
+            setEvents(currentEvents);
+            console.log('Events fetched successfully:', currentEvents);
         } catch (error) {
             console.error('Could not fetch events:', error.message);
         }
@@ -71,7 +73,8 @@ const EventsContextProvider = ({ children }) => {
             [name]: formattedValue,
         }));
     };
-
+ 
+    
     const handleFileChange = async (e) => {
         const file = e.target.files[0];
 
